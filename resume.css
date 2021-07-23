@@ -5,3 +5,19 @@ body {
   margin: 0;
   background-color: cadetblue;
 }
+
+.grid-container {
+  display: grid;
+  background-color: red;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+
+  grid-gap: 10px;
+  
+}
+
+.grid-item {
+text-align: center;
+
+
+}
