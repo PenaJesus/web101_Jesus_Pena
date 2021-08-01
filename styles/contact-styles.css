@@ -1,0 +1,173 @@
+body{
+  display: flex;
+  font-family: 'Inconsolata', monospace;
+  
+}
+
+
+
+.container{
+  
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+}
+.container-top{
+  background-color: #329996;
+  
+  height: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 50px;
+  justify-items: center;
+  justify-content: space-between;
+  color: #DBD8A2;
+  
+}
+
+h2{
+  color: #D74F33;
+}
+.Address{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phone{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.email{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.container-bottom{
+  background-color: #DBD8A2;
+  height: 50%;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 50px;
+  justify-content: space-around;
+  align-items: center;
+  color: #4B3E4D;
+}
+
+.bottom-right{
+  display: grid;
+  gap: 10px;
+  grid-template:
+  "first last" 3vh
+  "email birth" 3vh
+  "bio bio"10vh
+  "buttons buttons" 
+  10vh / 1fr 1fr 
+}
+
+.bottom-left{
+  display: grid;
+  grid-template:
+  "hear hear"
+  "radio radio"
+
+}
+
+.button{
+  grid-area: buttons;
+}
+ 
+ 
+
+button{
+ width: 40%;
+ height: 30%;
+}
+
+
+#bio{
+  width: 317px;
+  height: 100%;
+}
+
+@media only screen and (max-width: 576px) {
+  .container{
+  
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    justify-content: space-between;
+  }
+  .container-top{
+    background-color: #329996;
+    
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    justify-items: center;
+    color: #DBD8A2; 
+    overflow:auto;
+    
+  }
+  .container-bottom{
+    background-color: #DBD8A2;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    color: #4B3E4D;
+    
+  }
+  .bio{
+    width: 50%;
+    height: 50%;
+    
+  }
+}
+
+/*grid assignments*/
+
+.first-name{
+  grid-area: first;
+}
+
+.last-name{
+  grid-area: last;
+}
+
+.emailadd{
+  grid-area: email;
+}
+
+.bio{
+  grid-area: bio;
+}
+
+.age{
+  grid-area: age;
+}
+
+.birthday{
+  grid-area: birth;
+}
+
+.hear{
+  grid-area: hear;
+}
+
+.radio{
+  grid-area: radio;
+}
