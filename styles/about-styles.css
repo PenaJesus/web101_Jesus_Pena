@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.container{
+  
+  overflow: scroll;
+  background-color: #152B3C;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-gap: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  grid-template: 
+  ". story ." 5vh
+  "image1 image1 image1" 40vh
+  "description description description"20vh
+  "description2 description2 image2" 20vh
+  "image3 description3 description3" 
+       20vh / 1fr 1fr 1fr;
+  
+}
+
+
+
+
+/* grid assignments */
+
+.Our-Story{
+  grid-area: story;
+  display: flex;
+  justify-content: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: larger;
+}
+
+.Description{
+  grid-area: description;
+  padding-left: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+h1{
+  color: #F0DDAA;
+}
+h2{
+  color: #59B390;
+}
+p{
+  font-size: 14pt;
+  color: #E47C5D;
+}
+
+.first-image{
+  grid-area: image1;
+  background-image: url(../tree.jpg);
+  background-repeat: no-repeat;
+  background-size: 60% 80%  ;
+  background-position: center;
+  
+  
+}
+
+
+
+
+.second-description{
+  grid-area:description2;
+  padding-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-image{
+  display: flex;
+  justify-content: center;
+  grid-area: image2;
+  background-image: url(../greatness.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.third-description{
+  grid-area:description3;
+  
+}
+
+.third-image{
+  grid-area: image3;
+  background-image: url(../dreams.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+@media only screen and (max-width: 576px) {
+  .container{
+    padding: 0% 5% 5% 5%;
+    overflow: scroll;
+    background-color: #152B3C;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    font-family: 'Courier New', Courier, monospace;
+    flex-direction: column;
+    text-align: center;
+  }
+  .Our-Story{
+    grid-area: story;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
+    
+  }
+  .Description{
+    grid-area: description;
+    padding-left: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+.first-image{
+  
+  background-image: url(../tree.jpg);
+  background-repeat: no-repeat;
+  background-size: contain  ;
+  background-position: center;
+  
+  
+}
+}
